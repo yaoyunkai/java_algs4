@@ -56,7 +56,8 @@ public class Stopwatch {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        int n = Integer.parseInt(args[0]);
+        // int n = Integer.parseInt(args[0]);
+        int n = 100 * 100 * 100;
 
         // sum of square roots of integers from 1 to n using Math.sqrt(x).
         Stopwatch timer1 = new Stopwatch();
