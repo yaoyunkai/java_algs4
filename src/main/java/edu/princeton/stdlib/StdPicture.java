@@ -339,7 +339,7 @@ public final class StdPicture {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        StdPicture.create(args[0]);
+        StdPicture.create("data/mandrill.jpg");
         System.out.printf("%d-by-%d\n", picture.width(), picture.height());
         StdPicture.show();
     }
