@@ -8,6 +8,8 @@
     <artifactId>algs4</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Java algs4</name>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -39,6 +41,23 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <filters>
+            <!-- 成为属性文件 -->
+            <filter>src/main/filters/filter.properties</filter>
+        </filters>
+
+        <resources>
+<!--            <resource>-->
+<!--                <directory>src/main/resources/</directory>-->
+<!--                &lt;!&ndash;<filtering> 元素的作用是让 Maven 在构建过程中-->
+<!--                自动将资源文件中的占位符替换为对应的属性值，以简化应用程序的配置管理。-->
+
+<!--                &ndash;&gt;-->
+<!--                <filtering>true</filtering>-->
+<!--            </resource>-->
+        </resources>
+
     </build>
 
     <profiles>
@@ -68,6 +87,5 @@
         </profile>
 
     </profiles>
-
 
 </project>

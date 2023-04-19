@@ -1,10 +1,11 @@
 # Readme
 
 Maven
-    lifecycle
-    plugins
-    goal
-    profiles
+
+- lifecycle 
+- plugins 
+- goal
+- profiles
 
 ![img.png](img.png)
 
