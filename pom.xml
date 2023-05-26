@@ -42,50 +42,6 @@
             </plugin>
         </plugins>
 
-        <filters>
-            <!-- 成为属性文件 -->
-<!--            <filter>src/main/filters/filter.properties</filter>-->
-        </filters>
-
-        <resources>
-<!--            <resource>-->
-<!--                <directory>src/main/resources/</directory>-->
-<!--                &lt;!&ndash;<filtering> 元素的作用是让 Maven 在构建过程中-->
-<!--                自动将资源文件中的占位符替换为对应的属性值，以简化应用程序的配置管理。-->
-
-<!--                &ndash;&gt;-->
-<!--                <filtering>true</filtering>-->
-<!--            </resource>-->
-        </resources>
-
     </build>
-
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <database.driver>com.mysql.jdbc.Driver</database.driver>
-                <database.url>jdbc:mysql://localhost:3306/devdb</database.url>
-                <database.username>devuser</database.username>
-                <database.password>devpassword</database.password>
-            </properties>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <database.driver>com.mysql.jdbc.Driver</database.driver>
-                <database.url>jdbc:mysql://localhost:3306/proddb</database.url>
-                <database.username>devuser</database.username>
-                <database.password>devpassword</database.password>
-            </properties>
-        </profile>
-
-    </profiles>
 
 </project>
