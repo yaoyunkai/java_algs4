@@ -1,4 +1,4 @@
-package com.libyao.common.test;
+package com.libyao.common;
 
 
 import java.nio.charset.Charset;
@@ -28,6 +28,7 @@ public class TestString {
         printUnicodePoint(c1);
 
         printStringBytes("你好", StandardCharsets.UTF_8);
+        printStringBytes("你好", Charset.forName("gb2312"));
 
         int[] unicodeArray = {0x0048, 0x0065, 0x006C, 0x006C, 0x006F, 0x002C, 0x4E16, 0x754C};
 
