@@ -1,4 +1,4 @@
-package com.libyao.common;
+package com.libyao.common.ch5;
 
 import java.time.LocalDate;
 
@@ -7,9 +7,9 @@ public class Employee {
     private double salary;
     private LocalDate hireDay;
 
-    public Employee(String n, double s, int year, int month, int day) {
-        name = n;
-        salary = s;
+    public Employee(String name, double salary, int year, int month, int day) {
+        this.name = name;
+        this.salary = salary;
         hireDay = LocalDate.of(year, month, day);
     }
 
@@ -28,14 +28,5 @@ public class Employee {
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
         salary += raise;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", salary=" + salary +
-                ", hireDay=" + hireDay +
-                '}';
     }
 }
