@@ -48,3 +48,18 @@ Java语言规范将派生于Error类或RuntimeException类的所有异常
 方法声明抛出异常的主要目的是告诉调用方方法可能会发生异常，
 调用方需要相应地处理异常，要么通过try-catch块捕获异常，要么通过再次声明异常继续向上层调用者传递。
 
+
+泛型类型的通配符
+直观地讲，带有超类型限定的通配符可以向泛型对象写入，带有子类型限定的通配符可以从泛型对象读取。
+类型变量的限定
+
+? extend Type
+? super Type
+
+LocalDate实现了ChronoLocalDate，而ChronoLocalDate扩展了Comparable<ChronoLocalDate>。
+因此，LocalDate实现的是Comparable<ChronoLocalDate>而不是Comparable<LocalDate>。
+
+无限定通配符
+
+Pair<?>
+
