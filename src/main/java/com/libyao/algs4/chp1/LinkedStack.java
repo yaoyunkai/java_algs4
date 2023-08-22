@@ -1,12 +1,18 @@
 package com.libyao.algs4.chp1;
 
-import edu.princeton.stdlib.StdIn;
-import edu.princeton.stdlib.StdOut;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/*
+链表的遍历
 
+for (Node x = first; x ! = null; x = x.next)
+{
+    // 处理x.item
+}
+
+
+*/
 public class LinkedStack<Item> implements Iterable<Item> {
     private int n;          // size of the stack
     private Node first;     // top of stack
@@ -20,7 +26,7 @@ public class LinkedStack<Item> implements Iterable<Item> {
     public LinkedStack() {
         first = null;
         n = 0;
-        assert check();
+        // assert check();
     }
 
     public boolean isEmpty() {
@@ -32,20 +38,26 @@ public class LinkedStack<Item> implements Iterable<Item> {
     }
 
     public void push(Item item) {
+        // 头插法,最后插入的一定是first
+        // 将next指向上次插入的node
         Node oldfirst = first;
         first = new Node();
         first.item = item;
         first.next = oldfirst;
         n++;
-        assert check();
+        // assert check();
     }
 
     public Item pop() {
+        /*
+        从first取出node，然后将first指向first.next
+        
+         */
         if (isEmpty()) throw new NoSuchElementException("Stack underflow");
         Item item = first.item;        // save item to return
         first = first.next;            // delete first node
         n--;
-        assert check();
+        // assert check();
         return item;                   // return the saved item
     }
 
@@ -57,8 +69,7 @@ public class LinkedStack<Item> implements Iterable<Item> {
 
     public String toString() {
         StringBuilder s = new StringBuilder();
-        for (Item item : this)
-            s.append(item + " ");
+        for (Item item : this) s.append(item).append(" ");
         return s.toString();
     }
 
@@ -114,13 +125,19 @@ public class LinkedStack<Item> implements Iterable<Item> {
 
     public static void main(String[] args) {
         LinkedStack<String> stack = new LinkedStack<String>();
-        while (!StdIn.isEmpty()) {
-            String item = StdIn.readString();
-            if (!item.equals("-"))
-                stack.push(item);
-            else if (!stack.isEmpty())
-                StdOut.print(stack.pop() + " ");
-        }
-        StdOut.println("(" + stack.size() + " left on stack)");
+        // while (!StdIn.isEmpty()) {
+        //     String item = StdIn.readString();
+        //     if (!item.equals("-"))
+        //         stack.push(item);
+        //     else if (!stack.isEmpty())
+        //         StdOut.print(stack.pop() + " ");
+        // }
+
+        stack.push("b");
+        stack.push("c");
+        stack.push("d");
+        stack.push("e");
+        // StdOut.println("(" + stack.size() + " left on stack)");
+        System.out.println(stack);
     }
 }

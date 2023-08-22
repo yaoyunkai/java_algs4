@@ -98,11 +98,20 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
 
     public static void main(String[] args) {
         ResizingArrayStack<String> stack = new ResizingArrayStack<String>();
-        while (!StdIn.isEmpty()) {
-            String item = StdIn.readString();
-            if (!item.equals("-")) stack.push(item);
-            else if (!stack.isEmpty()) StdOut.print(stack.pop() + " ");
-        }
+        // while (!StdIn.isEmpty()) {
+        //     String item = StdIn.readString();
+        //     if (!item.equals("-")) stack.push(item);
+        //     else if (!stack.isEmpty()) StdOut.print(stack.pop() + " ");
+        // }
+
+        stack.push("ac");
+        stack.push("acb");
+        stack.push("acd");
+        stack.push("acde");
+        stack.push("acdy");
+        stack.push("qq");
+        stack.pop();
+
         StdOut.println("(" + stack.size() + " left on stack)");
     }
 }

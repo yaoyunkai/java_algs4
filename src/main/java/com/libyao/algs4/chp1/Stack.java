@@ -1,8 +1,5 @@
 package com.libyao.algs4.chp1;
 
-import edu.princeton.stdlib.StdIn;
-import edu.princeton.stdlib.StdOut;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -12,12 +9,11 @@ public class Stack<Item> implements Iterable<Item> {
     private int n;                // size of the stack
 
     // helper linked list class
-    private static class Node<Item> {
-        private Item item;
-        private Node<Item> next;
+    private static class Node<E> {
+        private E item;
+        private Node<E> next;
     }
 
-    
     public Stack() {
         first = null;
         n = 0;
@@ -35,13 +31,13 @@ public class Stack<Item> implements Iterable<Item> {
 
 
     public void push(Item item) {
+        // 头插法
         Node<Item> oldfirst = first;
-        first = new Node<Item>();
+        first = new Node<>();
         first.item = item;
         first.next = oldfirst;
         n++;
     }
-
 
     public Item pop() {
         if (isEmpty()) throw new NoSuchElementException("Stack underflow");
@@ -50,7 +46,6 @@ public class Stack<Item> implements Iterable<Item> {
         n--;
         return item;                   // return the saved item
     }
-
 
     public Item peek() {
         if (isEmpty()) throw new NoSuchElementException("Stack underflow");
@@ -94,16 +89,12 @@ public class Stack<Item> implements Iterable<Item> {
         }
     }
 
-
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<String>();
-        while (!StdIn.isEmpty()) {
-            String item = StdIn.readString();
-            if (!item.equals("-"))
-                stack.push(item);
-            else if (!stack.isEmpty())
-                StdOut.print(stack.pop() + " ");
-        }
-        StdOut.println("(" + stack.size() + " left on stack)");
+        Stack<String> stack = new Stack<>();
+        stack.push("b");
+        stack.push("c");
+        stack.push("d");
+        stack.push("e");
+        System.out.println(stack);
     }
 }
