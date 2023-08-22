@@ -1,8 +1,6 @@
-package com.libyao.algs4;
+package com.libyao.algs4.chp1;
 
 import edu.princeton.stdlib.In;
-import edu.princeton.stdlib.StdIn;
-import edu.princeton.stdlib.StdOut;
 
 import java.util.Arrays;
 
@@ -30,6 +28,26 @@ public class BinarySearch {
         return -1;
     }
 
+    public static int rank(int[] arr, int key) {
+        return _rank(arr, 0, arr.length - 1, key);
+    }
+
+    private static int _rank(int[] arr, int lo, int hi, int key) {
+        if (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+
+            if (arr[mid] == key) {
+                return mid;
+            }
+            if (arr[mid] > key) {
+                return _rank(arr, lo, hi - 1, key);
+            } else {
+                return _rank(arr, lo + 1, hi, key);
+            }
+        }
+        return -1;
+    }
+
     /**
      * Reads in a sequence of integers from the allowlist file, specified as
      * a command-line argument; reads in integers from standard input;
@@ -46,11 +64,15 @@ public class BinarySearch {
         // sort the array
         Arrays.sort(allowlist);
 
-        // read integer key from standard input; print if not in allowlist
-        while (!StdIn.isEmpty()) {
-            int key = StdIn.readInt();
-            if (BinarySearch.indexOf(allowlist, key) == -1) StdOut.println(key);
-        }
+        // System.out.println(allowlist);
+        System.out.println(Arrays.toString(allowlist));
+
+        int idx = indexOf(allowlist, 54);
+        System.out.println(idx);
+
+        int i = rank(allowlist, 54);
+        System.out.println(i);
+
     }
 
 }
