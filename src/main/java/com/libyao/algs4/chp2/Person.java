@@ -43,6 +43,10 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person o) {
+        if (o == null) {
+            throw new IllegalArgumentException("null of Person");
+        }
+
         if (age == o.age) return 0;
         return age > o.age ? 1 : -1;
     }

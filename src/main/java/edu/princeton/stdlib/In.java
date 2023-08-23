@@ -526,6 +526,14 @@ public final class In {
         return vals;
     }
 
+    public Integer[] readAllIntegers() {
+        String[] fields = readAllStrings();
+        Integer[] vals = new Integer[fields.length];
+        for (int i = 0; i < fields.length; i++)
+            vals[i] = Integer.parseInt(fields[i]);
+        return vals;
+    }
+
     /**
      * Reads all remaining tokens from this input stream, parses them as longs,
      * and returns them as an array of longs.
