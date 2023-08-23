@@ -67,7 +67,7 @@ public class Insertion {
     }
 
     public static void main(String[] args) {
-        In in = new In("data/tinyInts.txt");
+        In in = new In("data/tinyText.txt");
         Integer[] allowlist = in.readAllIntegers();
         show(allowlist);
         sort(allowlist);

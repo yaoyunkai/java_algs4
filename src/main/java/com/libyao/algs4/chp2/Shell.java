@@ -36,8 +36,10 @@ public class Shell {
         while (h >= 1) {
             /*
             n = 19
-            h = 13
-            
+            1, h = 13时， 只有 h ~ n 的元素被排序
+            2, h = 4 时, 间隔为4的子数组  0 4 8 12 16 是有序的 
+                                   同理 1 5 9 13 17 也是有序的
+            3, h = 1 时, 相当于插入排序
 
              */
             for (int i = h; i < n; i++) {
@@ -89,7 +91,7 @@ public class Shell {
         Integer[] allowlist = in.readAllIntegers();
 
         // System.out.println(allowlist.length);
-        
+
         show(allowlist);
         sort(allowlist);
         show(allowlist);
