@@ -11,6 +11,8 @@ public class SortCompare {
         if (alg.equals("Insertion")) Insertion.sort(a);
         if (alg.equals("Selection")) Selection.sort(a);
         if (alg.equals("Shell")) Shell.sort(a);
+        if (alg.equals("Merge")) Merge.sort(a);
+        if (alg.equals("MergeBU")) MergeBU.sort(a);
         return timer.elapsedTime();
     }
 
@@ -29,16 +31,16 @@ public class SortCompare {
     }
 
     public static void main(String[] args) {
-        String alg1 = "Insertion";
-        String alg2 = "Shell";
+        String alg1 = "Quick";
+        // String alg2 = "MergeBU";
 
         int N = 10000;
-        int T = 10;
+        int T = 100;
         double t1 = timeRandomInput(alg1, N, T);
-        double t2 = timeRandomInput(alg2, N, T);
+        // double t2 = timeRandomInput(alg2, N, T);
 
         StdOut.println("t1 cost: " + t1);
-        StdOut.println("t2 cost: " + t2);
+        // StdOut.println("t2 cost: " + t2);
 
         // StdOut.printf("For %d random Doubles\n    %s is", N, alg1);
         // StdOut.printf(" %.1f times faster than %s\n", t2 / t1, alg2);

@@ -1,6 +1,6 @@
 package com.libyao.algs4.chp2;
 
-import edu.princeton.stdlib.StdIn;
+import edu.princeton.stdlib.In;
 import edu.princeton.stdlib.StdOut;
 
 /*
@@ -34,16 +34,28 @@ public class MergeBU {
 
 
     public static void sort(Comparable[] a) {
-        int n = a.length;
+        int n = a.length; // 18
         Comparable[] aux = new Comparable[n];
+
+        // 以长度增长, 1, 2 4 8 16 32 ...
         for (int len = 1; len < n; len *= 2) {
+            System.out.printf("len: %d \n", len);
+
+            // 实际上是以长度2的子数组开始排序的
             for (int lo = 0; lo < n - len; lo += len + len) {
+                /*
+                lo: 0 2 4 6 8 10 ...
+                hi: 1 3 5 7 9 11 ...
+                
+                
+                 */
                 int mid = lo + len - 1;
                 int hi = Math.min(lo + len + len - 1, n - 1);
+                System.out.printf("merge, lo:%d hi:%d \n", lo, hi);
                 merge(a, aux, lo, mid, hi);
             }
         }
-        assert isSorted(a);
+        // assert isSorted(a);
     }
 
 
@@ -60,16 +72,20 @@ public class MergeBU {
     }
 
     // print array to standard output
-    private static void show(Comparable[] a) {
-        for (int i = 0; i < a.length; i++) {
-            StdOut.println(a[i]);
+    private static <T extends Comparable<T>> void show(T[] a) {
+        for (T t : a) {
+            StdOut.print(t);
+            StdOut.print(" ");
         }
+        StdOut.println();
     }
 
 
     public static void main(String[] args) {
-        String[] a = StdIn.readAllStrings();
-        MergeBU.sort(a);
-        show(a);
+        In in = new In("data/tinyText.txt");
+        Integer[] allowlist = in.readAllIntegers();
+        show(allowlist);
+        sort(allowlist);
+        show(allowlist);
     }
 }

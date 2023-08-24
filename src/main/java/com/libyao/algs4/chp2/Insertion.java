@@ -17,7 +17,7 @@ import edu.princeton.stdlib.StdOut;
 对一个很大且其中的元素已经有序（或接近有序）的数组进行排序将会比对随机顺序的数组或是逆序数组进行排序要快得多。
 当倒置的数量很少时，插入排序很可能比本章中的其他任何算法都要快。
 
-TODO 要大幅提高插入排序的速度并不难，只需要在内循环中将较大的元素都向右移动而不总是交换两个元素
+要大幅提高插入排序的速度并不难，只需要在内循环中将较大的元素都向右移动而不总是交换两个元素
 
  */
 public class Insertion {
@@ -35,6 +35,15 @@ public class Insertion {
                 exch(arr, j, j - 1);
             }
         }
+    }
+
+    /*
+    带坐标的插入排序
+     */
+    public static <T extends Comparable<T>> void sort(T[] a, int lo, int hi) {
+        for (int i = lo; i <= hi; i++)
+            for (int j = i; j > lo && less(a[j], a[j - 1]); j--)
+                exch(a, j, j - 1);
     }
 
     private static <T extends Comparable<T>> boolean less(T v, T w) {
