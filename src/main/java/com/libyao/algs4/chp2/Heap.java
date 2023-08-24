@@ -45,7 +45,7 @@ public class Heap {
             // 把最大的元素放到最后
             exch(pq, 1, k);
             k = k - 1;
-            sink(pq, 1, k);
+            sink(pq, 1, k);  // 限制sink的终点
         }
     }
 
