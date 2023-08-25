@@ -14,6 +14,26 @@ import java.util.NoSuchElementException;
 
 有序查找树的API
 
+put 
+get
+delete
+contains
+isEmpty
+size
+
+min -> Key
+max -> Key
+
+floor     找出小于等于该键的最大键
+ceiling   找出大于等于该键的最小键
+rank      找出小于指定键的键的数量   i==rank(select(i))
+select    找出排名为k的键           key==select(rank(key))
+ 
+keys
+
+
+
+
 
  */
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
@@ -123,6 +143,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         // insert new key-value pair
         if (n == keys.length) resize(2 * keys.length);
 
+        // 从最后到i, 往后位移, 把i的位置腾出来
         for (int j = n; j > i; j--) {
             keys[j] = keys[j - 1];
             vals[j] = vals[j - 1];
@@ -145,6 +166,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
             return;
         }
 
+        // 从左往右, 左移
         for (int j = i; j < n - 1; j++) {
             keys[j] = keys[j + 1];
             vals[j] = vals[j + 1];
@@ -248,16 +270,19 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
 
     public static void main(String[] args) {
-        BinarySearchST<String, Integer> st = new BinarySearchST<>();
+        BinarySearchST<Integer, String> st = new BinarySearchST<>();
+        st.put(23, "a");
+        st.put(12, "a");
+        st.put(45, "a");
+        st.put(11, "a");
+        st.put(16, "a");
+        st.put(22, "a");
+        st.put(26, "a");
+        st.put(5, "a");
+        st.put(67, "a");
+        st.put(8, "a");
+        st.put(44, "a");
 
-        st.put("a", 1);
-        st.put("b", 2);
-        st.put("c", 3);
-        st.put("d", 4);
-        st.put("e", 5);
-        st.put("f", 6);
-        st.put("a", 7);
-        st.delete("e");
     }
 
 }
