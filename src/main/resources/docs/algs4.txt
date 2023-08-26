@@ -8,3 +8,15 @@ Dijkstra的双栈算术表达式求值算法
 
 排序成本模型。
 在研究排序算法时，我们需要计算比较和交换的数量。对于不交换元素的算法，我们会计算访问数组的次数。
+
+
+HashMap
+TreeMap
+LinkedHashMap
+ConcurrentHashMap
+
+ArrayList
+LinkedList
+Vector
+Stack
+CopyOnWriteArrayList

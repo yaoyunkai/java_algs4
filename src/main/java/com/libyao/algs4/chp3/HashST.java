@@ -35,6 +35,11 @@ hashCode
 高效性 计算简便；
 均匀性 均匀地散列所有的键。
 
+------------------------------------------------
+HashMap
+TreeMap
+LinkedHashMap
+ConcurrentHashMap
 
  */
 public class HashST {
