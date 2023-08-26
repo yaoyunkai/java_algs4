@@ -1,4 +1,4 @@
-package com.libyao.common.ch5;
+package com.libyao.corejava.ch5;
 
 /**
  * This program demonstrates inheritance.

@@ -1,4 +1,4 @@
-package com.libyao.common.ch6;
+package com.libyao.corejava.ch6;
 
 
 import javax.swing.*;

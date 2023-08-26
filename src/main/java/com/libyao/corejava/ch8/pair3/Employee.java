@@ -1,4 +1,4 @@
-package com.libyao.common.ch8.pair3;
+package com.libyao.corejava.ch8.pair3;
 
 import java.time.LocalDate;
 

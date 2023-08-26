@@ -1,4 +1,4 @@
-package com.libyao.common.ch8.pair3;
+package com.libyao.corejava.ch5;
 
 public class Manager extends Employee {
     private double bonus;
@@ -22,9 +22,5 @@ public class Manager extends Employee {
 
     public void setBonus(double b) {
         bonus = b;
-    }
-
-    public double getBonus() {
-        return bonus;
     }
 }

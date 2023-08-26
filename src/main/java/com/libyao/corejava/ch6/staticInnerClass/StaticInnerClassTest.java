@@ -1,4 +1,4 @@
-package com.libyao.common.ch6.staticInnerClass;
+package com.libyao.corejava.ch6.staticInnerClass;
 
 /**
  * This program demonstrates the use of static inner classes.

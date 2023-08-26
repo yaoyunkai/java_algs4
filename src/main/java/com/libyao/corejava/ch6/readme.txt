@@ -11,9 +11,9 @@ outObject.this new InnerClass();
 
 
 """
-public class com.libyao.common.ch6.innerclass.TalkingClock1$TimePrinter implements java.awt.event.ActionListener {
-  final com.libyao.common.ch6.innerclass.TalkingClock1 this$0;
-  public com.libyao.common.ch6.innerclass.TalkingClock1$TimePrinter(com.libyao.common.ch6.innerclass.TalkingClock1);
+public class com.libyao.corejava.ch6.innerclass.TalkingClock1$TimePrinter implements java.awt.event.ActionListener {
+  final com.libyao.corejava.ch6.innerclass.TalkingClock1 this$0;
+  public com.libyao.corejava.ch6.innerclass.TalkingClock1$TimePrinter(com.libyao.corejava.ch6.innerclass.TalkingClock1);
   public void actionPerformed(java.awt.event.ActionEvent);
 }
 

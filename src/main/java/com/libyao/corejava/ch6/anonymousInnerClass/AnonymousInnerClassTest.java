@@ -1,4 +1,4 @@
-package com.libyao.common.ch6.anonymousInnerClass;
+package com.libyao.corejava.ch6.anonymousInnerClass;
 
 import javax.swing.*;
 import java.awt.*;

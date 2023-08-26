@@ -1,4 +1,4 @@
-package com.libyao.common.ch8.pair1;
+package com.libyao.corejava.ch8.pair1;
 
 /**
  * @author Cay Horstmann

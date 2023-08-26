@@ -1,4 +1,4 @@
-package com.libyao.common.ch8.genericReflection;
+package com.libyao.corejava.ch8.genericReflection;
 
 import java.lang.reflect.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package com.libyao.common.ch8.pair2;
+package com.libyao.corejava.ch8.pair2;
 
 import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;

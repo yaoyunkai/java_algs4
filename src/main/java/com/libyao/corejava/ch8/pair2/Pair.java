@@ -1,4 +1,4 @@
-package com.libyao.common.ch8.pair2;
+package com.libyao.corejava.ch8.pair2;
 
 /**
  * @version 1.00 2004-05-10
