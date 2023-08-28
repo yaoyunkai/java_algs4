@@ -1,4 +1,4 @@
-package com.libyao.leetcode.t0027;
+package com.libyao.leetcode.t0027_remove_element;
 
 /*
 
@@ -15,6 +15,7 @@ public class Solution {
 
         for (int right = 0; right < n; right++) {
             if (nums[right] != val) {
+                // 将变量放到left位置
                 nums[left] = nums[right];
                 left++;
             }

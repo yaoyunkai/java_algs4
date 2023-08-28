@@ -1,4 +1,4 @@
-package com.libyao.leetcode.t0088;
+package com.libyao.leetcode.t0088_merge_sorted_array;
 
 /*
 合并两个有序数组
@@ -10,7 +10,7 @@ package com.libyao.leetcode.t0088;
 class Solution {
     public void merge1(int[] nums1, int m, int[] nums2, int n) {
         // 从尾到头
-        
+
         int p1 = m - 1, p2 = n - 1;
         int tail = m + n - 1;
         int cur;

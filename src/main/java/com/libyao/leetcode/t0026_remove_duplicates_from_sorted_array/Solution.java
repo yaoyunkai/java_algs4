@@ -1,4 +1,4 @@
-package com.libyao.leetcode.t0026;
+package com.libyao.leetcode.t0026_remove_duplicates_from_sorted_array;
 
 /*
 给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。
