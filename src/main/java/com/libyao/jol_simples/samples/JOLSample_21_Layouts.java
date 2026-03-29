@@ -44,6 +44,18 @@ import static java.lang.System.out;
  */
 public class JOLSample_21_Layouts {
 
+    private static boolean initialized = false;
+
+    static {
+        try {
+            System.setProperty("jdk.attach.allowAttachSelf", "true");
+            initialized = true;
+        } catch (Exception e) {
+            // 记录日志但不中断
+            System.err.println("JOL initialization warning: " + e.getMessage());
+        }
+    }
+
     /*
      * This is the example of more verbose reachability graph.
      *
